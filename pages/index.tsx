@@ -1,3 +1,4 @@
+import Banner from "@/component/banner";
 import Pagination from "@/component/pagination";
 import IntroductionSection from "@/pages/introductionSection";
 import Posts from "@/pages/posts";
@@ -11,10 +12,6 @@ export default function Home() {
     { name: "Quản Lý Bán Hàng", count: 22 },
     { name: "Báo Chí Nói Về FOSO", count: 7 },
     { name: "Tin Tức FOSO", count: 5 },
-  ];
-  const banners = [
-    "/images/banner/banner-1.png",
-    "/images/banner/banner-2.png",
   ];
 
   return (
@@ -62,18 +59,7 @@ export default function Home() {
               </ul>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-4">
-              {banners.map((src, index) => (
-                <Image
-                  key={index}
-                  src={src}
-                  width={366}
-                  height={655}
-                  alt={`banner-${index + 1}`}
-                  className="w-full lg:w-[366px] h-auto"
-                />
-              ))}
-            </div>
+            <Banner />
           </div>
         </div>
 

@@ -1,6 +1,13 @@
+import Post from "@/component/post";
+import Content from "./content";
+import Headline from "./headline";
+import ArticleDirectory from "./articleDirectory";
+import Banner from "@/component/banner";
+import Image from "next/image";
+
 export default function Page() {
   return (
-    <div className="max-w-[1440px] w-full my-0 mx-auto mt-5">
+    <div className="max-w-[1440px] w-full my-0 mx-auto mt-5 pb-5 px-3 ">
       <div className="breadcrumb mb-7">
         <span className="text-[#050505]  text-[14px] ">Trang chủ &gt;</span>{" "}
         <span className="text-[#050505] text-[14px] ">Tài Nguyên &gt;</span>{" "}
@@ -9,19 +16,41 @@ export default function Page() {
           Quản Lý Sẩn Xuất
         </span>
       </div>
-      <div className="flex gap-5">
-        <div className="w-[900px] ">
-          <div className="bg-[#E2F0FE] mt-4 mb-4 rounded-[8px] w-[114px] h-[26px] justify-center flex items-center">
-            <span className="text-[#0F4F9E] text-[12px]">Quản Lý Sản Xuất</span>
-          </div>
+      <div className="flex flex-col lg:flex-row justify-between gap-5">
+        <div className="w-full lg:w-[900px] ">
+          <Headline />
+          <Content />
+        </div>
+        <div className="w-full lg:w-[492px] mt-8 lg:mt-0">
+          <div className="mt-4">
+            <div className="flex items-center justify-between">
+              <span className="text-[24px] font-extrabold text-[#050505]">
+                Nội dung bài viết
+              </span>
+              <Image
+                src="/images/arrow-high.svg"
+                alt="arrow high"
+                width={17}
+                height={10}
+              />
+            </div>
+            <ArticleDirectory />
 
-          <div className="mt-3">
-            <span className="font-extrabold text-[38px] leading-10 text-[#050505] ">
-              Quy trình 5S là gì? Cách ứng dụng hiệu quả nên biết
-            </span>
+            <Banner />
           </div>
         </div>
-        <div className="w-[492px]"></div>
+      </div>
+
+      <div className=" mt-10">
+        <span className="text-[#050505] text-[36px] font-extrabold ">
+          Bài Viết Liên Quan
+        </span>
+
+        <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3  gap-4 mt-10">
+          {Array.from({ length: 3 }).map((_, index) => (
+            <Post key={index} />
+          ))}{" "}
+        </div>
       </div>
     </div>
   );

@@ -93,7 +93,14 @@ export default function Header(): JSX.Element {
       <div className=" w-full relative   mx-auto px-4 sm:px-6 lg:px-8  h-full  block lg:hidden ">
         <div className="flex lg:hidden h-full items-center justify-between gap-3 ">
           <div>
-            <Image src="/images/logo.png" alt="Logo" width={135} height={55} />
+            <Link href={"/"}>
+              <Image
+                src="/images/logo.png"
+                alt="Logo"
+                width={135}
+                height={55}
+              />
+            </Link>
           </div>
 
           <div className="flex items-center space-x-3">
