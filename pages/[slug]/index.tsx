@@ -22,7 +22,7 @@ export default function Page() {
           <Content />
         </div>
         <div className="w-full lg:w-[492px] mt-8 lg:mt-0">
-          <div className="mt-4">
+          <div className="sticky top-[5px]">
             <div className="flex items-center justify-between">
               <span className="text-[24px] font-extrabold text-[#050505]">
                 Nội dung bài viết
