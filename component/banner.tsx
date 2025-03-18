@@ -15,7 +15,7 @@ export default function Banner() {
           width={366}
           height={655}
           alt={`banner-${index + 1}`}
-          className="w-full lg:w-[366px] h-auto"
+          className="w-full lg:w-[366px] h-auto transition-transform duration-300 hover:scale-105"
         />
       ))}
     </div>

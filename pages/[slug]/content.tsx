@@ -3,7 +3,7 @@ import Feedback from "./feedback";
 
 export default function Content() {
   return (
-    <div className="mt-5">
+    <div className="mt-5 ">
       <div className="">
         <Image
           src={"/images/post/image-1.png"}
@@ -32,7 +32,7 @@ export default function Content() {
           width={52}
           height={52}
           alt="quotation marks"
-          className="absolute -top-[15px] left-0"
+          className="absolute -top-[26px] left-0"
         />
       </div>
 

@@ -4,14 +4,14 @@ import Link from "next/link";
 export default function Post() {
   return (
     <div className="pb-7">
-      <div>
+      <div className="overflow-hidden rounded-lg">
         <Link href={"/tai-sao-bom-quan-trong-trong-quan-ly-san-xuat"}>
           <Image
             src={"/images/posts/img-post.png"}
             alt="Image post"
             width={505}
             height={475}
-            className="w-full h-auto"
+            className="w-full h-auto transition-transform duration-300 hover:scale-105"
           />
         </Link>
       </div>
@@ -21,13 +21,13 @@ export default function Post() {
         </div>
 
         <Link href={"/tai-sao-bom-quan-trong-trong-quan-ly-san-xuat"}>
-          <span className="  text-2xl font-extrabold leading-[1.5]">
+          <span className="text-2xl font-extrabold leading-[1.5] transition-colors duration-300 hover:text-[#0F4F9E]">
             Tại sao BOM quan trọng trong quản lý sản xuất?
           </span>
         </Link>
 
-        <div className="flex items-center  mt-3 gap-6">
-          <div className=" pr-[25px] border-r-[1px] border-[#D9E1E7] flex items-center justify-center gap-2 text-[#667F93]">
+        <div className="flex items-center mt-3 gap-6">
+          <div className="pr-[25px] border-r-[1px] border-[#D9E1E7] flex items-center justify-center gap-2 text-[#667F93]">
             <Image
               src={"/images/posts/CalendarBlank.svg"}
               width={24}
@@ -41,19 +41,20 @@ export default function Post() {
               src={"/images/posts/Clock.svg"}
               width={24}
               height={24}
-              alt="CalendarBlank"
+              alt="Clock"
             />
             <span>10 phút đọc</span>
           </div>
         </div>
 
-        <div className=" mt-4 flex items-center gap-5 text-[#667F93]">
+        <div className="mt-4 flex items-center gap-5 text-[#667F93] transition-colors duration-300 hover:text-[#0F4F9E] cursor-pointer">
           <span>Khám phá thêm</span>
           <Image
             src={"/images/ArrowRight.svg"}
             width={24}
             height={24}
             alt="ArrowRight"
+            className="transition-transform duration-300 group-hover:translate-x-2"
           />
         </div>
       </div>
